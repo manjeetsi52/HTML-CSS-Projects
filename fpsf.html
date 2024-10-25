@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>food preference survery form</title>
+    <!-- <link rel="stylesheet" href="fpsf.css"> -->
+    <style>
+        /* you dont need to write that much css focus on html 
+        and after the styling */
+header p{
+    font-size: 12px;
+    font-weight: 700;
+}
+.table1{
+    border-spacing: 15px;
+    border-collapse: separate;
+}
+#t1body{
+    margin-bottom:-15px ;
+}
+.table2{
+    border-spacing: 10px;
+}
+.container{
+    border-top: 2px solid grey;
+}
+#col1{
+    width: 300px;
+}
+#name{
+    width: 100px;
+}
+#age{
+    width: 100px;
+    
+}
+.often{
+    border: 2px solid black;
+    width: 780px;
+    height: 130px;
+}   
+#table2row1{
+    font-size: 12px;
+    font-weight: 600;
+}
+.table2row2{
+    font-size: 12px;
+}
+#t2row1{
+    font-weight: 600;
+}
+.table2 tr{
+    font-size: 12px;
+    height: 10px;
+}
+.table2 td{
+    text-align: center;
+}
+
+#col{
+    text-align: left;
+    /* vertical-align: inherit; */
+}
+.t3c1{
+    width: 90px;
+    text-align: left;
+}
+.t3c2{
+    width: 110px;
+    text-align: left;
+}
+.rowtable3{
+    border: 1px solid black;
+}
+.table3{
+    padding-left: 20px;
+    border-spacing: 10px;
+}
+#row5{
+    height: 5px;
+}
+
+
+    </style>
+</head>
+<body>
+    <form action="/" method="post">
+        <!-- you can use header it is genrally good but if id is not needed you can avoid that -->
+        <!-- <header id="header"> -->
+        <header>
+            <h1>Food Preferences - Survey Form</h1>
+            <!-- here the para is good  -->
+            <p>Please fill out and submit the survey form at the earliest</p>
+        </header>
+        <!-- here use of div container is good choice -->
+        <div class="container">
+            <!-- you can make more readale code by using classes and ids more efficently
+             not the way it is written here -->
+                <table class="table1" >
+                    <tbody id="t1body">
+                        <tr id="row1" class="row">
+                            <td id="col1">
+                                <!-- i have used the label which is good practice  -->
+                                <label for="name" id="name" >1.Name</label>
+                            </td>
+                            <td id="col2">
+                                <input type="text" id="name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="age" id="age" >2.Age</label>
+                            </td>
+                            <td>
+                                <input type="number" id="age" name="age" min="1" max="100">
+                            </td>
+                        </tr>
+                        <tr>
+                            <!--  here you need to improve you have to use the different labels for different inputs 
+                              as it avoids confusions and you 
+                              also have to use the value attribute so that correct data to be submitted -->
+                            <td>
+                                <label for="radio" name="where" id="where">3.Where do you eat often?</label>
+                            </td>
+                            <td>
+                                <!-- use different labels and values for the inputs -->
+                                <input type="radio" name="where" id="at home"> at home
+                                <input type="radio" name="where" id="at work / school"> at work / school
+                                <input type="radio" name="where" id="in a restaurant"> in a restaurant
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4.Specify, how often</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="often">
+                                    <table class="table2" >
+                                        <tbody >
+                                            <tr id="t2row1">
+                                                <td></td>
+                                                <td>every day</td>
+                                                <td>a few times a week</td>
+                                                <td>once a week</td>
+                                                <td>several times a month</td>
+                                                <td>once a month</td>
+                                                <td>less often than once a month</td>
+                                            </tr>
+                                            <tr>
+                                                <td id="col">
+                                                    <!-- if i use class instead of id then it will not work why? -->
+                                                    <label for="meals" name="meals">You prepere your own meals</label>
+                                                </td>
+                                                <!-- provide the value here -->
+                                                <td><input type="radio" id="meals"></td>
+                                                <td><input type="radio" id="meals"></td>
+                                                <td><input type="radio" id="meals"></td>
+                                                <td><input type="radio" id="meals"></td>
+                                                <td><input type="radio" id="meals"></td>
+                                                <td><input type="radio" id="meals"></td>
+                                            </tr>
+                                            <tr>
+                                                <td  id="col">
+                                                    <label for="eatout"  name="eatout">You eat out</label>
+                                                </td>
+                                                <td><input type="radio" name="eatout" id="eatout"></td>
+                                                <td><input type="radio" name="eatout" id="eatout"></td>
+                                                <td><input type="radio" name="eatout" id="eatout"></td>
+                                                <td><input type="radio" name="eatout" id="eatout"></td>
+                                                <td><input type="radio" name="eatout" id="eatout"></td>
+                                                <td><input type="radio" name="eatout" id="eatout"></td>
+                                            </tr>
+                                            <tr>
+                                                <td id="col"><label for="foodforhome"  name="foodforhome"></label> Your order food for home</td>
+                                                <td><input type="radio" id="foodforhome" name="foodforhome"></td>
+                                                <td><input type="radio" id="foodforhome" name="foodforhome"></td>
+                                                <td><input type="radio" id="foodforhome" name="foodforhome"></td>
+                                                <td><input type="radio" id="foodforhome" name="foodforhome"></td>
+                                                <td><input type="radio" id="foodforhome" name="foodforhome"></td>
+                                                <td><input type="radio" id="foodforhome" name="foodforhome"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="row5">
+                            <td colspan="2">5.The most common place you visit are restaurants serving food of origin:</td>
+    
+                        </tr>
+                        <tr>
+                            <td><table class="table3">
+                                <tbody>
+                                    <tr>
+                                      <td class="t3c1"><input type="checkbox" name="polish" id="polish">
+                                      <label for="polish"></label> Polish</td>
+                                       <td class="t3c2"><input type="checkbox" name="indian" id="indian">
+                                      <label for="indian"></label> Indian</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="t3c1"><input type="checkbox" name="italian" id="italian">
+                                      <label for="italian"></label> Italian</td>
+                                      <td class="t3c2"><input type="checkbox" name="spanish" id="spanish">
+                                      <label for="spanish"></label> Spanish</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="t3c1"><input type="checkbox" name="Asian" id="Asian">
+                                      <label for="Asian"></label> Asian</td>
+                                      <td class="t3c2"><input type="checkbox" name="Chinese" id="Chinese">
+                                      <label for="Chisese"></label>Chinese</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="t3c1"><input type="checkbox" name="american" id="american">
+                                      <label for="american"></label> American</td>
+                                      <td class="t3c2"><input type="checkbox" name="other" id="other">
+                                      <label for="other"></label> Other</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        </tr>
+                        <tr>
+                            <td><label for="option"></label>Given an option, would you go Vegan?</td>
+                            <td><input type="radio" id="sure" name="option"> sure 
+                                <input type="radio" id="No" name="option">No
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><button type="submit">Submit</button>
+                                <button type="reset">Reset</button></td>
+                        </tr>
+                    </tbody>
+                    
+                    
+    
+    
+                </table>
+        </div>    
+    
+    </form>
+   
+</body> 
+</html>
